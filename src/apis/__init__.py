@@ -18,8 +18,8 @@ def create_app():
     
     api = Api(
           version = "1.0.0", 
-		      title = "Invoice Service", 
-		      description = "Service to report invoices.",
+		      title = "Report Service", 
+		      description = "Service to report.",
           doc='/'
     )
 
