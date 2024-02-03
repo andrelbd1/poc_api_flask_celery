@@ -1,7 +1,7 @@
 Using Celery with Flask
 =======================
 
-This repository contains the example of an application provides 
+This repository contains the example of an API using Celery to async processing.
 
 Quick Setup
 -----------
@@ -29,9 +29,13 @@ Quick Setup
     - connect S3 account credentials:
         - `S3_ACCESS_KEY`
         - `S3_SECRET_KEY`
-        - `S3_BUCKET`        
+        - `S3_BUCKET`
     - set path to save punctuation reports:
         - `S3_REPORT_FILE_PATH`
 5. Then start a Celery worker: `venv/bin/celery -A celery_worker.celery worker --loglevel=info --without-gossip --without-mingle --without-heartbeat --pool=prefork --task-events --prefetch-multiplier=1 --max-tasks-per-child=1 --time-limit=125`.
 6. Start the Flask application on your original terminal window: `venv/bin/python main.py`.
 7. Go to `http://localhost:8000/` and enjoy this application!
+
+Preview
+-----------
+![API](frame.png)
