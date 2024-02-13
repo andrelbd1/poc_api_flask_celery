@@ -1,4 +1,4 @@
-from src.apis import create_app
+from src import create_app
 from src.config import settings
 
 app = create_app()

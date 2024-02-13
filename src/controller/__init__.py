@@ -6,12 +6,12 @@ import pandas as pd
 from typing import Tuple
 from celery.exceptions import SoftTimeLimitExceeded
 from datetime import datetime, date
-from src.apis import celery
+from src import celery
 from src.config import settings
 from src.exceptions import *
-# from src.utils.Utils import save_report
-# from src.dbutil.mongo import MongoDB
-# from src.dbutil.redshift import RedshiftDB
+# from src.common.Utils import save_report
+# from src.models.mongo import MongoDB
+# from src.models.redshift import RedshiftDB
 
 @celery.task(soft_time_limit=120)
 def process_report(report):

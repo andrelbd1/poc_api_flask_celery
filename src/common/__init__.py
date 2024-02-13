@@ -53,8 +53,8 @@ class Utils:
                                             aws_access_key_id=settings.S3_ACCESS_KEY,
                                             aws_secret_access_key=settings.S3_SECRET_KEY)
 
-            s3_resource.Object(settings.S3_BUCKET, f'{settings.S3_REPORT_FILE_PATH}/{name}').put(Body=file_buffer.getvalue())
-            return f's3://{settings.S3_BUCKET}/{settings.S3_REPORT_FILE_PATH}/{name}'
+            s3_resource.Object(settings.S3_BUCKET, f'{settings.S3_FILE_PATH}/{name}').put(Body=file_buffer.getvalue())
+            return f's3://{settings.S3_BUCKET}/{settings.S3_FILE_PATH}/{name}'
 
         except Exception as err:
             logging.exception(f"process_report :: something wrong happened to save report: {report}: {err!r}")
@@ -85,7 +85,7 @@ class Utils:
                                     aws_access_key_id=settings.S3_ACCESS_KEY,
                                     aws_secret_access_key=settings.S3_SECRET_KEY)
 
-            s3_resource.Object(settings.S3_BUCKET, settings.S3_REPORT_FILE_PATH+'/'+report).delete()
+            s3_resource.Object(settings.S3_BUCKET, settings.S3_FILE_PATH+'/'+report).delete()
         
         except Exception as err:
             logging.exception(f"process_report :: something wrong happened to remove report: {err!r}")
@@ -98,7 +98,7 @@ class Utils:
                                     aws_access_key_id=settings.S3_ACCESS_KEY,
                                     aws_secret_access_key=settings.S3_SECRET_KEY)
 
-            client.download_file(settings.S3_BUCKET, settings.S3_REPORT_FILE_PATH+'/'+report, report)
+            client.download_file(settings.S3_BUCKET, settings.S3_FILE_PATH+'/'+report, report)
         
         except Exception as err:
             logging.exception(f"process_report :: something wrong happened to download report: {err!r}")

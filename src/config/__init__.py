@@ -34,6 +34,6 @@ class Settings:
     S3_SECRET_KEY = os.environ['S3_SECRET_KEY']
     S3_BUCKET = os.environ['S3_BUCKET']
     
-    S3_REPORT_FILE_PATH = os.environ['S3_REPORT_FILE_PATH']
+    S3_FILE_PATH = os.environ['S3_FILE_PATH']
         
 settings = Settings()
