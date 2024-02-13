@@ -9,14 +9,13 @@ class Settings:
     ENV = os.environ["ENV"]
     
     # Mongo Credentials
-    PREFIX_DB_MONGO = os.environ["PREFIX_DB_MONGO"]
     USER_DB_MONGO = os.environ["USER_DB_MONGO"]
     PW_DB_MONGO = os.environ["PW_DB_MONGO"]
     HOST_DB_MONGO = os.environ["HOST_DB_MONGO"]
     COMPLEMENT_DB_MONGO = os.environ["COMPLEMENT_DB_MONGO"]
     
     if PREFIX_DB_MONGO and PW_DB_MONGO and USER_DB_MONGO and HOST_DB_MONGO and COMPLEMENT_DB_MONGO:
-        DB_MONGO_URI = f"{PREFIX_DB_MONGO}://{USER_DB_MONGO}:{PW_DB_MONGO}@{HOST_DB_MONGO}/{COMPLEMENT_DB_MONGO}"
+        DB_MONGO_URI = f"mongodb+srv://{USER_DB_MONGO}:{PW_DB_MONGO}@{HOST_DB_MONGO}/{COMPLEMENT_DB_MONGO}"
 
     # Redshift Credentials
     HOST_DB_REDSHIFT = os.environ["HOST_DB_REDSHIFT"]

@@ -17,7 +17,6 @@ Quick Setup
     - environment (local | prod):
         - `ENV`
     - connect Mongo account credentials:
-        - `PREFIX_DB_MONGO`
         - `USER_DB_MONGO`
         - `PW_DB_MONGO`
         - `HOST_DB_MONGO`
