@@ -1,5 +1,6 @@
 import uuid
 import json
+import time
 import logging
 import numpy as np
 import pandas as pd
@@ -19,14 +20,19 @@ def process_report(report):
     :param report: report id
     """
     try:
-        pass
+        print(f"process_report :: initing report {report} ...")
+        print(f"process_report :: retrieving data...")
         # connect to DBs
         # redshift_instance = RedshiftDB()
-        # mongodb_instance = MongoDB()
-        
-        # make processing...
-        
+        # mongodb_instance = MongoDB()        
+        time.sleep(3)
+        print(f"process_report :: building report {report} ...")
+        # processing data...
+        time.sleep(5)
+        print(f"process_report :: saving report {report} ...")
         # save_report(spreedsheet, filename)
+        time.sleep(3)
+        print(f"process_report :: report {report} done!")
 
     except ReportWarningEmpty:
         logging.exception(f"process_report :: exception ReportWarningEmpty to report: {report}")
