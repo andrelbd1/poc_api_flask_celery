@@ -1,7 +1,11 @@
 Using Celery with Flask
 =======================
 
-This repository contains the example of an API using Celery to async processing.
+[![GitHub last commit](https://img.shields.io/github/last-commit/andrelbd1/poc_api_flask_celery.svg)](https://github.com/andrelbd1/poc_api_flask_celery) 
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/andrelbd1/poc_api_flask_celery.svg)](https://github.com/andrelbd1/poc_api_flask_celery) 
+
+
+This repository contains an example of an API using Flask and Celery for asynchronous processing.
 
 Quick Setup
 -----------
