@@ -20,7 +20,6 @@ Quick Setup
         - `USER_DB_MONGO`
         - `PW_DB_MONGO`
         - `HOST_DB_MONGO`
-        - `COMPLEMENT_DB_MONGO`
     - connect Redshift account credentials:
         - `HOST_DB_REDSHIFT`
         - `DATABASE_DB_REDSHIFT`
